@@ -1,9 +1,12 @@
 from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS
 import pandas as pd
 import joblib
 from sklearn.tree import DecisionTreeClassifier
 
 app = Flask(__name__)
+
+CORS(app, origins=["https://healthcareplus-1.onrender.com"])
 
 # Load the trained model
 model = joblib.load('symptom_diagnosis_model.pkl')
