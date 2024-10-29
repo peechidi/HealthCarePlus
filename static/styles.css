@@ -1,0 +1,248 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  h1, h2 {
+    color: #003d5b;
+  }
+  
+  p {
+    color: #555;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Header */
+  header {
+    background-color: #00796b;
+    padding: 15px 0;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    float: right;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    font-weight: 500;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero Section */
+  .hero-color {
+    background-color: #c8e6c9;
+  }
+  .hero {
+    background-color: #c8e6c9;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+  }
+  
+  .cta-buttons {
+    margin-top: 20px;
+  }
+  
+  .btn, .btn-secondary {
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .btn {
+    background-color: #00796b;
+    color: white;
+  }
+  
+  .btn:hover {
+    background-color: #004d40;
+  }
+  
+  .btn-secondary {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Health Analytics Section */
+  .health-analytics {
+    background-color: #e0f7fa;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .analytics-content {
+    margin: 30px 0;
+    background-color: #00796b;
+    padding: 50px;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .chart-placeholder {
+    height: 300px;
+    background-color: #004d40;
+    color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+  }
+  
+  /* Predictive Diagnosis Section */
+  .predictive-diagnosis {
+    background-color: #fff;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .predictive-diagnosis form input {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 250px;
+  }
+  
+  .predictive-diagnosis form button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .predictive-diagnosis form button:hover {
+    background-color: #004d40;
+  }
+  
+  .diagnosis-prediction {
+    padding: 40px;
+    background-color: #f1f8f6;
+    color: #333;
+    text-align: center;
+  }
+  
+  .diagnosis-prediction form {
+    margin-top: 20px;
+  }
+  
+  .diagnosis-prediction label {
+    display: block;
+    margin-bottom: 8px;
+    color: #00796b;
+  }
+  
+  .diagnosis-prediction input {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .diagnosis-prediction button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .diagnosis-prediction button:hover {
+    background-color: #004d40;
+  }
+  
+  #predictionResult {
+    margin-top: 30px;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+
+  /* Telemedicine Section */
+  .telemedicine {
+    background-color: #e8f5e9;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .telemedicine h2 {
+    margin-bottom: 20px;
+  }
+  
+  .telemedicine a {
+    background-color: #4caf50;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: white;
+    transition: 0.3s;
+  }
+  
+  .telemedicine a:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .footer-links a {
+    color: #c8e6c9;
+    margin: 0 15px;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  footer p {
+    margin-top: 15px;
+  }
+  

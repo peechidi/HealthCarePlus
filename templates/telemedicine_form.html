@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Analytics & Telemedicine</title>
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<body class="hero-color">
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">HealthCare+</div>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('disease_trends') }}">Disease Trends</a></li>
+          <li><a href="#predictiveDiagnosis">Predictive Diagnosis</a></li>
+          <li><a href="#telemedicine">Telemedicine</a></li>
+          <li><a href="#aboutUs">Contact Us</a></li>
+          <li><a href="{{ url_for('login') }}">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="telemedicine-form">
+    <div class="container">
+      <h2>Book a Consultation</h2>
+      <form id="consultationForm" action="/submit_consultation" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time" name="time" required>
+        
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="static/line.js"></script>
+<script src="static/predict.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Analytics & Telemedicine</title>
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">HealthCare+</div>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="#diseaseTrend">Disease Trends</a></li>
+          <li><a href="#predictiveDiagnosis">Predictive Diagnosis</a></li>
+          <li><a href="#telemedicine">Telemedicine</a></li>
+          <li><a href="#aboutUs">Contact Us</a></li>
+          <li><a href="{{ url_for('login') }}">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Comprehensive Health Analytics, Predictive Diagnosis & Telemedicine</h1>
+      <p>Monitor trends, predict diseases, and access healthcare from the comfort of your home.</p>
+      <div class="cta-buttons">
+        <a href="{{ url_for('disease_trends') }}" class="btn">View Health Trends</a>
+        <a href="{{ url_for('telemedicine_form') }}" class="btn-secondary">Talk to a Doctor</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Health Analytics Section -->
+  <section id="diseaseTrend"  class="health-analytics">
+    <div class="container">
+      <h2>Explore Disease Trends and Statistics</h2>
+      <p>Stay informed with the latest health data and insights.</p>
+      
+      <!-- Line Chart for Disease Trends -->
+      <canvas id="diseaseTrendChart"></canvas>
+  
+        <!-- Heatmap for Disease Prevalence -->
+        <div id="heatmap"></div>
+
+      <a href="{{ url_for('disease_trends') }}" class="btn">Explore Detailed Analytics</a>
+    </div>
+  </section>
+  
+  <!-- Predictive Diagnosis Section -->
+  <section id="predictiveDiagnosis"  class="diagnosis-prediction">
+    <div class="container">
+      <h2>AI-Driven Disease Diagnosis</h2>
+      <p>Click on the symptoms to get a predictive diagnosis.</p>
+  
+      <!-- Diagnosis form -->
+      <form id="diagnosisForm" onsubmit="getDiagnosis(event)">
+        <label><input type="checkbox" id="fever"> Fever</label><br>
+        <label><input type="checkbox" id="cough"> Cough</label><br>
+        <label><input type="checkbox" id="headache"> Headache</label><br>
+        <label><input type="checkbox" id="sore_throat"> Sore Throat</label><br>
+        <label><input type="checkbox" id="fatigue"> Fatigue</label><br>
+        <label><input type="checkbox" id="runny_nose"> Runny Nose</label><br>
+        <label><input type="checkbox" id="muscle_pain"> Muscle Pain</label><br>
+  
+        <button type="submit">Predict Diagnosis</button>
+      </form>
+      <p id="result"></p>
+      <!-- Prediction result -->
+      <div id="diagnosisResult"></div>
+    </div>
+  </section>
+  
+
+  <!-- Telemedicine Section -->
+  <section id="telemedicine" class="telemedicine">
+    <div class="container">
+      <h2>Consult a Doctor Online</h2>
+      <p>Get medical advice from licensed professionals anytime, anywhere.</p>
+      <a href="{{ url_for('telemedicine_form') }}" class="btn">Book a Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="aboutUs">
+    <div class="container">
+      <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+      <p>&copy; 2024 HealthCare+. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="static/line.js"></script>
+<script src="static/predict.js"></script>
+</body>
+</html>
